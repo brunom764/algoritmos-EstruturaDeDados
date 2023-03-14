@@ -1,3 +1,31 @@
+#Funcionamento:
+
+#Toda Segunda o sistema carrega CPFs dos alunos e forma um array a partir de seus dígitos multiplicado por 10 :
+
+#ex.: 72290379050 => [70, 20, 20, 90, 0, 30, 70, 90, 0, 50, 0]
+
+#Caso o CPF tenha dígitos repetidos, então deve-se reduzir esse array somando os valores duplicados:
+
+#ex.: [70, 20, 20, 90, 0, 30, 70, 90, 0, 50, 0] => [140, 40, 180, 0, 30, 50]
+
+#Por último, é gerado um número aleatório (Magic Number) entre 30 e 990 para cada CPF. Dessa forma, se a soma de dois elementos distintos do array final for igual ao número aleatório, então a aluna(o) ganha permissão de acessar a sala de convivência para usar a cafeteira na semana.
+
+#Input
+
+#N - Onde N é o número de operações da entrada
+
+#Várias linhas com a seguinte informação:
+
+#CPF MN - Calcula autorização considerando um CPF e um (magic number) MN.
+
+#Output
+
+#RESPONSE - Onde pode ser UP Permission se o usuário receber a permissão ou NOT Permission, caso não esteja autorizado na semana.
+
+
+
+
+
 class HashTableCPF:
     def __init__(self):
         self.array = [None] * 11
